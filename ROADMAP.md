@@ -9,6 +9,7 @@ The future vision for this workspace is to evolve from a local management dashbo
 - [ ] **Multi-Agent Chat**: Build the functional "Gemini Terminal" to allow direct chat with different agent personas.
 
 ## 🔵 Phase 2: Agent Ecosystem (Q4 2026)
+- [ ] **Agent Room**: A virtual collaborative space to visualize and manage multiple active agents (Gemini, Claude, etc.) in one view.
 - [ ] **Skill Marketplace**: A UI to browse, install, and update Gemini Skills (`.skill` files) directly from the dashboard.
 - [ ] **Claude & GPT Bridge**: Integration with Anthropic and OpenAI APIs to allow "Dual-Agent" peer review.
 - [ ] **Autonomous Bug Fixing**: A feature where the agent monitors Docker logs and automatically proposes/applies fixes for crashes.
