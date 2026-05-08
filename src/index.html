@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Center - Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; color: #f8fafc; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.1); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="flex h-screen">
+
+    <!-- Sidebar -->
+    <aside class="w-64 glass border-r border-slate-700 p-6 flex flex-col">
+        <div class="mb-10">
+            <h1 class="text-2xl font-bold gradient-text"><i class="fas fa-robot mr-2"></i>Agent Center</h1>
+        </div>
+        
+        <nav class="flex-1 space-y-4">
+            <a href="#" class="flex items-center p-3 rounded-lg bg-blue-600 text-white"><i class="fas fa-chart-line w-6"></i> Dashboard</a>
+            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition"><i class="fas fa-plus-circle w-6"></i> New Project</a>
+            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition"><i class="fas fa-tasks w-6"></i> Progress</a>
+            <a href="#" class="flex items-center p-3 rounded-lg hover:bg-slate-800 transition"><i class="fas fa-bolt w-6"></i> Skills</a>
+        </nav>
+
+        <div class="mt-auto pt-6 border-t border-slate-700">
+            <div class="flex items-center">
+                <div class="w-10 h-10 rounded-full bg-indigo-500 flex items-center justify-center mr-3">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div>
+                    <p class="text-sm font-semibold">User</p>
+                    <p class="text-xs text-slate-400">Gemini Bridge Active</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 overflow-y-auto p-10">
+        <header class="flex justify-between items-center mb-10">
+            <div>
+                <h2 class="text-3xl font-bold">Welcome back!</h2>
+                <p class="text-slate-400">Here's what's happening in your Agent Center.</p>
+            </div>
+            <button class="bg-indigo-600 hover:bg-indigo-500 px-6 py-2 rounded-full font-semibold transition">
+                <i class="fas fa-sync-alt mr-2"></i> Refresh
+            </button>
+        </header>
+
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+            <div class="glass p-6 rounded-2xl">
+                <p class="text-slate-400 text-sm mb-2">Total Projects</p>
+                <h3 class="text-4xl font-bold">12</h3>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <p class="text-slate-400 text-sm mb-2">Active Agents</p>
+                <h3 class="text-4xl font-bold text-green-400">4</h3>
+            </div>
+            <div class="glass p-6 rounded-2xl">
+                <p class="text-slate-400 text-sm mb-2">Skills Installed</p>
+                <h3 class="text-4xl font-bold text-blue-400">1</h3>
+            </div>
+        </div>
+
+        <!-- Project Grid -->
+        <h3 class="text-xl font-bold mb-6">Recent Projects</h3>
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            
+            <!-- Project Card 1 -->
+            <div class="glass p-6 rounded-2xl border-l-4 border-blue-500">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h4 class="text-xl font-bold">Barbershop POS</h4>
+                        <p class="text-sm text-slate-400">Queue & Booking System</p>
+                    </div>
+                    <span class="bg-blue-900/50 text-blue-300 text-xs px-2 py-1 rounded">85% Done</span>
+                </div>
+                <div class="w-full bg-slate-700 h-2 rounded-full mb-6">
+                    <div class="bg-blue-500 h-2 rounded-full w-[85%]"></div>
+                </div>
+                <div class="flex justify-end space-x-2">
+                    <button class="text-sm hover:text-blue-400">View Details</button>
+                </div>
+            </div>
+
+            <!-- Project Card 2 -->
+            <div class="glass p-6 rounded-2xl border-l-4 border-indigo-500">
+                <div class="flex justify-between items-start mb-4">
+                    <div>
+                        <h4 class="text-xl font-bold">Airportels API</h4>
+                        <p class="text-sm text-slate-400">Logistic Backend</p>
+                    </div>
+                    <span class="bg-indigo-900/50 text-indigo-300 text-xs px-2 py-1 rounded">40% Done</span>
+                </div>
+                <div class="w-full bg-slate-700 h-2 rounded-full mb-6">
+                    <div class="bg-indigo-500 h-2 rounded-full w-[40%]"></div>
+                </div>
+                <div class="flex justify-end space-x-2">
+                    <button class="text-sm hover:text-indigo-400">View Details</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Create New Project Section -->
+        <section class="mt-12 glass p-8 rounded-2xl">
+            <h3 class="text-2xl font-bold mb-6"><i class="fas fa-magic mr-2 text-indigo-400"></i>Create New Project</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Project Name</label>
+                    <input type="text" placeholder="e.g. My New App" class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-slate-400 mb-2">Framework</label>
+                    <select class="w-full bg-slate-800 border border-slate-700 p-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500">
+                        <option>Laravel</option>
+                        <option>React (Next.js)</option>
+                        <option>Docker Only</option>
+                    </select>
+                </div>
+            </div>
+            <button class="mt-6 w-full bg-indigo-600 hover:bg-indigo-500 py-3 rounded-lg font-bold transition">
+                Initialize Project with Agent
+            </button>
+        </section>
+    </main>
+
+</body>
+</html>
